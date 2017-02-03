@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BTC Graph</title>
+<link href="BTCgraph.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="btcgraph.js"></script>
+</head>
+<body>
+<div id="svgContainer">
+	<svg width="100%" height="100%">
+		<rect width="100" height="100" stroke="red" stroke-width="4" fill="gray">
+			<animate attributeName="x" values="100;105;100" dur="1s" repeatCount="indefinite" />
+			<animate attributeName="y" values="100;105;100" dur="2s" repeatCount="indefinite" />
+		</rect>
+		<rect width="100" height="100" stroke="red" stroke-width="4" fill="gray">
+			<animate attributeName="x" values="500;505;500" dur="2s" repeatCount="indefinite" />
+			<animate attributeName="y" values="100;105;100" dur="1s" repeatCount="indefinite" />
+		</rect>
+		<path stroke="green" stroke-width="4" fill="none">
+			<animate attributeName="d" values="M 150 150 Q 300 100 550 150;M 150 150 Q 400 200 550 150;M 150 150 Q 300 100 550 150;" dur="2s" repeatCount="indefinite" />
+		</path>
+		<circle r="7" stroke="black">
+			<animate attributeName="cx" values="150;155;150" dur="1s" repeatCount="indefinite" />
+			<animate attributeName="cy" values="150;155;150" dur="2s" repeatCount="indefinite" />
+		</circle>
+
+		<circle r="7" stroke="black">
+			<animate attributeName="cx" values="550;555;550" dur="2s" repeatCount="indefinite" />
+			<animate attributeName="cy" values="150;155;150" dur="1s" repeatCount="indefinite" />
+		</circle>
+	</svg>
+</div>
+
+</body>
+</html>
