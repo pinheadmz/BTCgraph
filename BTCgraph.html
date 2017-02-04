@@ -9,6 +9,38 @@
 <body>
 <div id="svgContainer">
 	<svg width="100%" height="100%">
+		<path id="path1" d="M 600 600 a 300 300 0 1 1 1 1 z" stroke="black" stroke-width="4" fill="none" opacity="0.1"/>
+		<g>
+			<rect width="100" height="100" stroke="red" stroke-width="4" fill="gray">
+				<animate attributeName="x" values="0;5;0" dur="1s" repeatCount="indefinite" />
+				<animate attributeName="y" values="0;5;0" dur="2s" repeatCount="indefinite" />
+			</rect>
+			<circle cx="50" cy="50" r="3" stroke="red" fill="red">
+				<animate attributeName="cx" values="50;55;50" dur="1s" repeatCount="indefinite" />
+				<animate attributeName="cy" values="50;55;50" dur="2s" repeatCount="indefinite" />
+			</circle>
+			<animateMotion dur="10s" repeatCount="indefinite" rotate="none" >
+				<mpath xlink:href="#path1"/>
+			</animateMotion>
+		</g>
+		<g>
+			<rect width="100" height="100" stroke="green" stroke-width="4" fill="gray">
+				<animate attributeName="x" values="0;5;0" dur="1s" repeatCount="indefinite" />
+				<animate attributeName="y" values="0;5;0" dur="2s" repeatCount="indefinite" />
+			</rect>
+			<circle cx="50" cy="50" r="3" stroke="green" fill="green">
+				<animate attributeName="cx" values="50;55;50" dur="1s" repeatCount="indefinite" />
+				<animate attributeName="cy" values="50;55;50" dur="2s" repeatCount="indefinite" />
+			</circle>
+			<animateMotion dur="10s" begin="5s" repeatCount="indefinite" rotate="none" >
+				<mpath xlink:href="#path1"/>
+			</animateMotion>
+		</g>
+	</svg>
+</div>
+<!--
+<div id="svgContainer">
+	<svg width="100%" height="100%">
 		<rect width="100" height="100" stroke="red" stroke-width="4" fill="gray">
 			<animate attributeName="x" values="100;105;100" dur="1s" repeatCount="indefinite" />
 			<animate attributeName="y" values="100;105;100" dur="2s" repeatCount="indefinite" />
@@ -31,6 +63,6 @@
 		</circle>
 	</svg>
 </div>
-
+-->
 </body>
 </html>
