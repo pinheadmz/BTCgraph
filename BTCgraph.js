@@ -80,6 +80,8 @@ function redraw(){
 	x2 = c2.offset().left + 2;
 	y2= c2.offset().top + 2;
 	
+	
+	
 	$("#L1").attr('d',"M " + x1 + " " + y1 + " L " + x2 + " " + y2);
 	
 	
