@@ -81,10 +81,7 @@ function redraw(){
 	x2 = c2.getBoundingClientRect().left + 2;
 	y2= c2.getBoundingClientRect().top + 2;
 	
-	
-	
 	$("#L1").attr('d',"M " + x1 + " " + y1 + " L " + x2 + " " + y2);
-	
 	
 	window.requestAnimationFrame(redraw);
 }
