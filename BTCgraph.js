@@ -71,3 +71,19 @@ function listalltx(){
 	
 	return count;
 }
+
+function redraw(){
+	c1 = $("#C1");
+	c2 = $("#C2");
+	x1 = c1.offset().left + 2;
+	y1 = c1.offset().top + 2;
+	x2 = c2.offset().left + 2;
+	y2= c2.offset().top + 2;
+	
+	$("#L1").attr('d',"M " + x1 + " " + y1 + " L " + x2 + " " + y2);
+	
+	
+	window.requestAnimationFrame(redraw);
+}
+
+window.requestAnimationFrame(redraw);
