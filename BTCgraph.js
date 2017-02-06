@@ -1,11 +1,3 @@
-var requestAnimationFrame = window.requestAnimationFrame ||
-	window.webkitRequestAnimationFrame ||
-	window.mozRequestAnimationFrame ||
-	window.oRequestAnimationFrame ||
-	window.msRequestAnimationFrame ||
-	function( callback ){
-		setTimeout(callback, 1000 / 60);
-	};
 
 var bitcoinapi = {
 	url: "http://btc.blockr.io/api/v1/",
@@ -82,12 +74,12 @@ function listalltx(){
 }
 
 function redraw(){
-	c1 = $("#C1");
-	c2 = $("#C2");
-	x1 = c1.offset().left + 2;
-	y1 = c1.offset().top + 2;
-	x2 = c2.offset().left + 2;
-	y2= c2.offset().top + 2;
+	c1 = $("#C1")[0];
+	c2 = $("#C2")[0];
+	x1 = c1.getBoundingClientRect().left + 2;
+	y1 = c1.getBoundingClientRect().top + 2;
+	x2 = c2.getBoundingClientRect().left + 2;
+	y2= c2.getBoundingClientRect().top + 2;
 	
 	
 	
